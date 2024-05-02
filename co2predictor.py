@@ -14,4 +14,4 @@ def cum(year_num):
   X = x.reshape(-1,1)
   reg = LinearRegression().fit(X,y)
   year_arr =  np.array(year_num)
-  return int(f'{reg.predict(input_arr.reshape(1,-1))} tonnes in year_num)
+  return int(f'{reg.predict(input_arr.reshape(1,-1))} tonnes in {year_num}')
