@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import requests
 
-def cum(year_num):
+def predict(year_num):
   response = requests.get('https://github.com/ColinJ69/Co2Awareness/raw/main/Book%202%20(1).xlsx')
   data = pd.read_excel(response.content, usecols=[0,1])
   x = np.array(data['Year'])
