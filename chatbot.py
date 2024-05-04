@@ -12,8 +12,7 @@ patterns = [
     [r'what happened in 2020|why did it dip in 2020|why did it dip|why did it get lower in 2020', ["Covid was the reason it dipped in 2020. People were stuck inside and not travelling around."]],
 ]
 chatbot = Chat(patterns, reflections)
-def converse():
-  text = input('You: ')
+def converse(text):
 
   if re.search(r'\d', text) != -1:
     h = [str(s) for s in text.split() if s.isdigit()]
@@ -24,5 +23,5 @@ def converse():
       print("We can't fufill that request")
   else:
     response = chatbot.respond(shut)
-    print(f'Bot: {response}')
+    return (f'Bot: {response}')
   
