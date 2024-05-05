@@ -2,3 +2,5 @@ website that informs people on the effects of rising co2 levels, includes a char
 
 
 source for data = https://ourworldindata.org/co2-emissions
+
+if only i wasn't horrible at html and flask i could finish this project🤑
