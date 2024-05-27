@@ -15,9 +15,11 @@ def predict(year_num):
   X = x.reshape(-1,1)
   reg = LinearRegression().fit(X,y)
   year_arr =  np.array(year_num)
-  predict = int(reg.predict(year_arr.reshape(-1,1)))
-  base_to_billions = predict/1000000000
-  return (str(int(base_to_billions)) + ' billion tonnes in ' + str(year_num))
+  prev_year_arr = np.array(year_num-1)
+  predict = int(reg.predict(year_arr.reshape(-1,1)))/1000000000
+  past_year = int(reg.predict(prev_year_arr.reshape(-1,1)))/1000000000
+  return (str(int(predict)) + ' billion tonnes in ' + str(year_num) + '. Which is a ' + str(round((100*((predict-37.15)/37.15)),2)) + '% increase from 2022 and a ' +
+          str(round((100*((predict/past_year)/37.15)),2)) + '% increase from the previous year.')
 
 
 patterns = [
@@ -36,11 +38,11 @@ def converse(text):
     if 0 < (int(''.join(h)) - 2022) <= 100:
       return predict(int(''.join(h)))
     else:
-      return "We can't predict that far"
+      return "Unreliable to predict that far"
   else:
     return chatbot.respond(text)
 
-
+converse("How about 2100")
 app = Flask(__name__, template_folder="C:/Users/johns/OneDrive/Desktop/templates")
 @app.route('/', methods=['GET', 'POST'])
 def main():
