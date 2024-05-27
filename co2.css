@@ -1,0 +1,56 @@
+.info{
+	position:absolute;
+    right:0px;
+    width:40%;
+    height:700px;
+	background: linear-gradient(180deg, rgb(30, 80, 230), rgb(219, 166, 67));
+    padding: 50px;
+    border-top-right-radius: 50px;
+}
+.background{
+	font-family: sans-serif;
+	font-size: 0.75rem;
+}
+.i{
+    font-size:2rem;
+}
+.chat{
+    padding:50px;
+    position:absolute;
+    left:0px;
+    width:50%;
+    height:700px;
+    background: linear-gradient(180deg, rgb(30, 80, 230), rgb(219, 166, 67));
+	border-top-left-radius: 50px;
+}
+.title{
+	color:pink;
+    font-size: 3rem;
+    margin: auto;
+    width: 35%
+}
+.ask{
+    font-size:1.5rem;
+}
+body{
+	background-color: skyblue
+}
+input{
+    padding:45px;
+    background-color: azure;
+    border-radius: 25px;
+    color:rgba(0, 0, 0, 0.619);
+    font-size:1rem;
+    width:400px;
+    border-width: 5px;
+    border-color: rgba(22, 22, 230, 0.489);
+}
+button{
+    width: 400px;
+    font-size: 2.5rem;
+    background-color: skyblue;
+    padding: 30px;
+    border-radius: 50px;
+    border-width: 5px;
+    border-color: rgba(65, 65, 227, 0.597);
+}
