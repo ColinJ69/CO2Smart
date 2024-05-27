@@ -42,7 +42,7 @@ def converse(text):
   else:
     return chatbot.respond(text)
 
-converse("How about 2100")
+
 app = Flask(__name__, template_folder="C:/Users/johns/OneDrive/Desktop/templates")
 @app.route('/', methods=['GET', 'POST'])
 def main():
