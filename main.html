@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- working on css rn for this -->
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,15 +7,28 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="co2.css">  
   </head>
   <body>
+    <h1 class="title"><b>Co2Smart</b></h1>
+    <div class="info">
+    <h2 class="i">Background</h2>
+      <h3 class="background">Carbon dioxide (CO2) is an important heat-trapping gas, also known as a greenhouse gas, that comes from the extraction and burning of fossil fuels (such as coal, oil, and natural gas), from wildfires, and natural processes like volcanic eruptions. The first graph shows atmospheric CO2 levels measured by NOAA at Mauna Loa Observatory, Hawaii, since 1958. The second graph shows CO2 levels during Earth’s last three glacial cycles, as captured by air bubbles trapped in ice sheets and glaciers.
+
+Since the onset of industrial times in the 18th century, human activities have raised atmospheric CO2 by 50% – meaning the amount of CO2 is now 150% of its value in 1750. This human-induced rise is greater than the natural increase observed at the end of the last ice age 20,000 years ago.</h3>
+    <img src="https://github.com/ColinJ69/CO2Smart/raw/main/graph1.png" width="600" height="300">
+  </div>
+  <div class="chat">
     <form id="form">
-      <input placeholder="type here" id='u_input'><br>
-      <button type="submit" name="button">submit</button>
+      <h1 class="ask">Ask about...How much more co2 will be in the atmosphere in 2030?</h1>
+      <input placeholder="Ask..." id='u_input'><br>
+      <br><br><br>
+      <button type="submit" name="button">enter...</button>
     </form>
+    <h1 id="output" class="output"></h1>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type=text/javascript>//Uses ajax to give real time answer with the chatbot in flask
+    <script type=text/javascript>
     $(document).ready(function() {
         $('#form').on('submit',function(e){
             $.ajax({
@@ -31,9 +44,6 @@
             e.preventDefault();
         });
     });
-    </script>
-    
-
-      <h1 id="output"></h1>
+    </script>      
   </body>
 </html>
